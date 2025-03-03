@@ -89,3 +89,34 @@ box-sizing: border-box;
 
 }
 
+footer {
+    background-color: rgb(26, 26, 26); /* Footer background color */
+    color: white; /* Text color */
+    padding: 10px; /* Padding inside the footer */
+    margin: 0 auto; /* Center the footer horizontally */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+.Desc1 {
+    color: white;
+    text-align: center; /* Center the text */
+    margin: 0;    /* Remove margin */
+    font-size: 14px; /* Make text smaller */
+    line-height: 1.2; /* Reduce line height */
+}
+.Links, .Socials {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text within items */
+    align-items: center; /* Center items vertically */
+    padding: 5px; /* Reduce padding */
+    margin: 0;    /* Remove margin */
+    font-size: 14px; /* Make text smaller */
+}
+.Links a, .Socials a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 10px; /* Add space between links */
+}
+.Links a:hover, .Socials a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
