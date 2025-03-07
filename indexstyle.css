@@ -1,3 +1,33 @@
+body {
+    background: radial-gradient(circle, #202020, #21378f); /* Circular gradient */
+    height: 100vh;                 
+    margin: 0;                     
+}
+
+.Introduction {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+    text-align: center;
+    justify-content: center;
+    font-family: verdana;
+    font-size: 100%;
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.Tools {
+    font-family: verdana;
+    font-size: 100%;
+}
+
+.Referral {
+    display: flex; /* Change to flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    flex-direction: row; /* Items will be in a row */
+    margin: 20px; /* Optional: add margin around the container */
+}
+
+
 h1 {
     color: rgb(255, 255, 255);
     font-family: verdana;
@@ -14,23 +44,45 @@ p1 {
     justify-content: center;
     align-items: center;
     position:relative;
-margin: auto;
-padding:auto;
-width: auto;
-box-sizing: border-box;
-background-color:rgba(26, 26, 26, 0.405);
+    margin: auto;
+    padding:auto;
+    width: auto;
+    box-sizing: border-box;
+    background-color:rgba(26, 26, 26, 0.405);
 }
 
-body {
-    background-image: url('Background.jpg'); /* Replace with your image path */
-    background-size: cover;        
-    background-repeat: no-repeat;  
-    background-position: center;    
-    height: 100vh;                 
-    margin: 0;                     
+/*Border container for website in Home Page*/
+.bordercontainer1 {
+    text-align: left; /* Align text to the left */
+    width: 250px; /* You can adjust this width as needed */
+    border: 2px solid #000; /* Border color and thickness */
+    padding: 10px; /* Space between the border and the content */
+    border-radius: 5px; /* Optional: rounded corners */
+    background-color: rgba(94, 94, 94, 0.541);
+}
+
+.bordercontainer2{
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #000; /* Border color and thickness */
+    padding: 10px;         /* Space between the border and the content */
+    margin: 20px 0;       /* Space outside the border */
+    border-radius: 5px;   /* Optional: rounded corners */
+    background-color: rgba(94, 94, 94, 0.541);
+}
+
+.bordercontainer3 {
+    text-align: center; /* Align text to center */
+    width: 250px; /* Adjust width as needed */
+    border: 2px solid #000; /* Border color and thickness */
+    padding: 10px; /* Space between the border and the content */
+    margin: 0 20px; /* Space outside the border, adjust as needed */
+    border-radius: 5px; /* Optional: rounded corners */
+    background-color: rgba(94, 94, 94, 0.541);
 }
 
 
+/*Navigation Styling*/
 .navigation {
     box-sizing: border-box;
     text-align: center;
@@ -65,7 +117,7 @@ body {
     }
 }
 
-
+/*Media*/
 .pic_of_tools {
     display:flex;
     justify-content: center;
@@ -79,17 +131,34 @@ body {
     margin:10px;
 }
 
-.Headshot {
-
-display:block;
-justify-content: center;
-text-align: center;
-align-items: center;
-box-sizing: border-box;
-
+.pic_of_lecturers {
+    display: flex; /* Use flexbox for the lecturers */
+    flex-direction: row; /* Keep images in a row */
+    align-items: center; /* Center images vertically */
+}
+.pic_of_lecturers a {
+    margin: 10px; /* Space between lecturer images */
+}
+.pic_of_lecturers img {
+    width: 250px; /* Set a fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+.pic_of_lecturers img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
 }
 
+.Headshot {
+    margin-right: 20px; /* Space between the image and the text */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+
+/*Footer*/
 footer {
+    font-family: verdana;
+    font-size: 100%;
     background-color: rgb(26, 26, 26); /* Footer background color */
     color: white; /* Text color */
     padding: 10px; /* Padding inside the footer */
@@ -115,7 +184,7 @@ footer {
 .Links a, .Socials a {
     color: white; /* Link color */
     text-decoration: none; /* Remove underline from links */
-    margin: 0 10px; /* Add space between links */
+    margin: 0 5px; /* Add space between links */
 }
 .Links a:hover, .Socials a:hover {
     text-decoration: underline; /* Underline on hover */
