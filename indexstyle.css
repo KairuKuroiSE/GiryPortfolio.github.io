@@ -154,6 +154,23 @@ p1 {
     border-radius: 10px; /* Optional: rounded corners */
 }
 
+.Headshot {
+    display: flex; /* Use flexbox for the lecturers */
+    flex-direction: row; /* Keep images in a row */
+    align-items: center; /* Center images vertically */
+}
+.Headshot a {
+    margin: 10px; /* Space between lecturer images */
+}
+.Headshot img {
+    width: 250px; /* Set a fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+.Headshot img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
 
 /*Footer*/
 footer {

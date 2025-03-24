@@ -16,6 +16,8 @@ body {
     box-sizing: border-box; /* Include padding in width calculation */
 }
 
+
+
 /*Navigation Styling*/
 h1 {
     color: rgb(255, 255, 255);
@@ -58,70 +60,68 @@ h1 {
     }
 }
 
-/*Form*/
-input[type=text], select, textarea {
-    font-family: verdana;
-    display: block;
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
 
-  input[type=email], select, textarea {
-    font-family: verdana;
-    display: block;
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: #006eff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker blue color */
-  input[type=submit]:hover {
-    background-color: #0000ff;
-  }
-  
-  /* Add a background color and some padding around the form */
-  .ContactMeForm {
-    font-family: verdana;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
-  
 
-/*Border Container*/
-.bordercontainer {
-    text-align: left; /* Align text to the left */
-    width: 250px; /* You can adjust this width as needed */
-    border: 2px solid #000; /* Border color and thickness */
-    padding: 10px; /* Space between the border and the content */
-    border-radius: 5px; /* Optional: rounded corners */
-    background-color: rgba(94, 94, 94, 0.541);
+.InformationAboutMe {
+text-align: center;
+font-family: Verdana;
+background-color: rgb(255, 255, 255);
+width: auto; /* You can adjust this width as needed */
+height: auto;
+padding: 70px; /* Space between the border and the content */
+margin: auto;
 }
+
+.InformationAboutMeImg {
+    display: flex; /* Use flexbox for the lecturers */
+    flex-direction: row; /* Keep images in a row */
+    align-items: center; /* Center images vertically */
+}
+.InformationAboutMeImg a {
+    margin: 10px; /* Space between lecturer images */
+}
+.InformationAboutMeImg img {
+    width: 250px; /* Set a fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+.InformationAboutMeImg img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.ListOfGoals {
+    text-align: left;
+    justify-content: left;
+}
+
+.Goals {
+    text-align: center;
+    font-family: Verdana;
+    background-color: rgba(255, 255, 255, 0.426);
+    width: auto; /* You can adjust this width as needed */
+    height: auto;
+    padding: 70px; /* Space between the border and the content */
+    margin: auto;
+    }
+    
+    .Goals {
+        display: flex; /* Use flexbox for the lecturers */
+        flex-direction: row; /* Keep images in a row */
+        align-items: center; /* Center images vertically */
+    }
+    .Goals a {
+        margin: 10px; /* Space between lecturer images */
+    }
+    .Goals img {
+        width: 250px; /* Set a fixed width for images */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Optional: rounded corners */
+        transition: transform 0.2s; /* Smooth transition for hover effect */
+    }
+    .Goals img:hover {
+        transform: scale(1.05); /* Slightly enlarge the image on hover */
+    }
 
 /*Footer*/
 footer {
@@ -157,4 +157,3 @@ footer {
 .Links a:hover, .Socials a:hover {
     text-decoration: underline; /* Underline on hover */
 }
-
