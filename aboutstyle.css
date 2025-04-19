@@ -108,6 +108,7 @@ border-radius: 8px; /* Optional: adds rounded corners */
     height: auto;
     padding: 70px; /* Space between the border and the content */
     margin: 70px;
+    border-radius: 15px;
     }
     
 .Goals li:hover {
@@ -148,6 +149,7 @@ border-radius: 8px; /* Optional: adds rounded corners */
         margin: 70px;             /* Centers the container if a width is specified or content is constrained */
         list-style-type: disc;  /* If using list items; adjust as needed */
         list-style-position: inside; /* places the marker inside the content block */
+        border-radius: 15px;
     }
     .Strengths img {
         width: 250px;
