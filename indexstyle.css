@@ -1,209 +1,258 @@
+:root {
+  --bg: #050816;
+  --bg-2: #14213d;
+  --panel: rgba(255, 255, 255, 0.07);
+  --panel-strong: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.14);
+  --text: #f7f7fb;
+  --muted: #a8b2c6;
+  --accent: #7dd3fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background: radial-gradient(circle, #202020, #21378f); /* Circular gradient */
-    height: 100vh;                 
-    margin: 0;                     
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: linear-gradient(120deg, var(--bg) 0%, #11192d 30%, var(--bg-2) 100%);
+  line-height: 1.6;
 }
 
-.Introduction {
-    display: flex; /* Use flexbox layout */
-    align-items: center; /* Center items vertically */
-    text-align: center;
-    justify-content: center;
-    font-family: verdana;
-    font-size: 100%;
-    border-radius: 10px; /* Optional: rounded corners */
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.Tools {
-    font-family: verdana;
-    font-size: 100%;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.Referral {
-    display: flex; /* Change to flexbox layout */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    flex-direction: row; /* Items will be in a row */
-    margin: 20px; /* Optional: add margin around the container */
-}
-
-
-h1 {
-    color: rgb(255, 255, 255);
-    font-family: verdana;
-    font-size: 200%;
-    text-align: center;
-}
-
-p1 {
-    color: rgb(255, 255, 255);
-    display:block;
-    font-family: verdana;
-    font-size: 100%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    margin: auto;
-    padding:auto;
-    width: auto;
-    box-sizing: border-box;
-    background-color:rgba(26, 26, 26, 0.405);
-}
-
-/*Border container for website in Home Page*/
-.bordercontainer1 {
-    text-align: left; /* Align text to the left */
-    width: 250px; /* You can adjust this width as needed */
-    border: 2px solid #000; /* Border color and thickness */
-    padding: 10px; /* Space between the border and the content */
-    border-radius: 5px; /* Optional: rounded corners */
-    background-color: rgba(94, 94, 94, 0.541);
-}
-
-.bordercontainer2{
-    text-align: center;
-    justify-content: center;
-    border: 2px solid #000; /* Border color and thickness */
-    padding: 10px;         /* Space between the border and the content */
-    margin: 20px 0;       /* Space outside the border */
-    border-radius: 5px;   /* Optional: rounded corners */
-    background-color: rgba(94, 94, 94, 0.541);
-}
-
-.bordercontainer3 {
-    text-align: center; /* Align text to center */
-    width: 250px; /* Adjust width as needed */
-    border: 2px solid #000; /* Border color and thickness */
-    padding: 10px; /* Space between the border and the content */
-    margin: 0 20px; /* Space outside the border, adjust as needed */
-    border-radius: 5px; /* Optional: rounded corners */
-    background-color: rgba(94, 94, 94, 0.541);
-}
-
-
-/*Navigation Styling*/
 .navigation {
-    box-sizing: border-box;
-    text-align: center;
-    font-family: verdana;
-    overflow: hidden;
-    background-color:rgba(26, 26, 26, 0.405);
-    padding: 20px 10px;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem clamp(1rem, 3vw, 2rem);
+  background: rgba(4, 10, 20, 0.72);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.navigation a:hover {
-    background-color: rgba(94, 94, 94, 0.541);
-    color: black;
+.brand {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
-.navigation a {
-    float: center;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
+.nav-links {
+  display: flex;
+  gap: 0.4rem;
 }
 
-@media screen and (max-width: 500px) {
-    .navigation a {
-        float: none;
-        display: block;
-        text-align: center;
-    }
+.nav-links a {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  color: var(--muted);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-/*Media*/
-.pic_of_tools {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text);
+  background: var(--panel-strong);
+}
+
+.page-shell {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.hero-card,
+.panel,
+.site-footer {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(16px);
+}
+
+.hero-card {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero-copy h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.hero-copy p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 58ch;
+}
+
+.button-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.8rem 1.05rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+  color: #07111f;
+  font-weight: 600;
+}
+
+.hero-media img {
+  width: min(320px, 100%);
+  margin-left: auto;
+  border-radius: 20px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.panel {
+  padding: 1.25rem;
+}
+
+.panel.accent {
+  background: linear-gradient(135deg, rgba(125, 211, 252, 0.18), rgba(255, 255, 255, 0.06));
+}
+
+.panel h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.1rem;
+}
+
+.tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.75rem 0 0.6rem;
+}
+
+.tech-row span {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.mentor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mentor img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.mentor p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto 2rem;
+  padding: 1.25rem;
+  color: var(--muted);
+}
+
+.site-footer h3 {
+  margin: 0 0 0.4rem;
+  color: var(--text);
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.social-links img {
+  width: 36px;
+  height: 36px;
+  filter: brightness(1.1);
+}
+
+.copyright {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .hero-card,
+  .info-grid,
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .navigation {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
     flex-wrap: wrap;
-    box-sizing: border-box;
-    background-color:rgba(26, 26, 26, 0.405);
-}
+    justify-content: center;
+  }
 
-.pic_of_tools img {
-    margin:10px;
-}
-
-.pic_of_lecturers {
-    display: flex; /* Use flexbox for the lecturers */
-    flex-direction: row; /* Keep images in a row */
-    align-items: center; /* Center images vertically */
-}
-.pic_of_lecturers a {
-    margin: 10px; /* Space between lecturer images */
-}
-.pic_of_lecturers img {
-    width: 250px; /* Set a fixed width for images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: rounded corners */
-    transition: transform 0.2s; /* Smooth transition for hover effect */
-}
-.pic_of_lecturers img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-}
-
-.Headshot {
-    margin-right: 20px; /* Space between the image and the text */
-    border-radius: 10px; /* Optional: rounded corners */
-}
-
-.Headshot {
-    display: flex; /* Use flexbox for the lecturers */
-    flex-direction: row; /* Keep images in a row */
-    align-items: center; /* Center images vertically */
-}
-.Headshot a {
-    margin: 10px; /* Space between lecturer images */
-}
-.Headshot img {
-    width: 250px; /* Set a fixed width for images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: rounded corners */
-    transition: transform 0.2s; /* Smooth transition for hover effect */
-}
-.Headshot img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-}
-
-/*Footer*/
-footer {
-    font-family: verdana;
-    font-size: 100%;
-    background-color: rgb(26, 26, 26); /* Footer background color */
-    color: white; /* Text color */
-    padding: 10px; /* Padding inside the footer */
-    margin: 0 auto; /* Center the footer horizontally */
-    box-sizing: border-box; /* Include padding in width calculation */
-}
-.Desc1 {
-    color: white;
-    text-align: center; /* Center the text */
-    margin: 0;    /* Remove margin */
-    font-size: 14px; /* Make text smaller */
-    line-height: 1.2; /* Reduce line height */
-}
-.Links, .Socials {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center items horizontally */
-    text-align: center; /* Center text within items */
-    align-items: center; /* Center items vertically */
-    padding: 5px; /* Reduce padding */
-    margin: 0;    /* Remove margin */
-    font-size: 14px; /* Make text smaller */
-}
-.Links a, .Socials a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline from links */
-    margin: 0 5px; /* Add space between links */
-}
-.Links a:hover, .Socials a:hover {
-    text-decoration: underline; /* Underline on hover */
+  .page-shell {
+    width: min(100% - 1.2rem, 1100px);
+  }
 }
 
